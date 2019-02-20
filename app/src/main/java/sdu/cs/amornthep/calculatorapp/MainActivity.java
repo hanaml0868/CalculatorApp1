@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         final EditText number1EditText = findViewById(R.id.edtNumber1);
         final EditText number2EditText = findViewById(R.id.edtNumber2);
         Button addButton = findViewById(R.id.btAdd);
+        Button addminus = findViewById(R.id.btAdd3);
+        Button addmultiply = findViewById(R.id.btAdd4);
+        Button adddivide = findViewById(R.id.btAdd5);
         final TextView resultTextView = findViewById(R.id.tvResult);
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +29,33 @@ public class MainActivity extends AppCompatActivity {
                 int num1 = Integer.parseInt(number1EditText.getText().toString());
                 int num2 = Integer.parseInt(number2EditText.getText().toString());
                 int result = num1+num2;
+                resultTextView.setText(result + "");
+            }
+        });
+        addminus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1 = Integer.parseInt(number1EditText.getText().toString());
+                int num2 = Integer.parseInt(number2EditText.getText().toString());
+                int result = num1-num2;
+                resultTextView.setText(result + "");
+            }
+        });
+        addmultiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1 = Integer.parseInt(number1EditText.getText().toString());
+                int num2 = Integer.parseInt(number2EditText.getText().toString());
+                int result = num1*num2;
+                resultTextView.setText(result + "");
+            }
+        });
+        adddivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1 = Integer.parseInt(number1EditText.getText().toString());
+                int num2 = Integer.parseInt(number2EditText.getText().toString());
+                int result = num1/num2;
                 resultTextView.setText(result + "");
             }
         });
